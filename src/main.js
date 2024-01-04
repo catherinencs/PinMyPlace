@@ -4,6 +4,7 @@ import Oruga from '@oruga-ui/oruga-next';
 import VueTelInput from 'vue-tel-input';
 import 'vue-tel-input/vue-tel-input.css';
 import axios from 'axios';
+import 'bulma/css/bulma.css';
 
 const globalOptions = {
     mode: 'auto',
@@ -22,4 +23,3 @@ if (process.env.NODE_ENV === 'development') {
 app.use(VueTelInput, globalOptions);
 app.use(Oruga);
 app.mount("#app");
-

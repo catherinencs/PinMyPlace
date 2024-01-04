@@ -1,16 +1,20 @@
 <template>
   <LocationForm/>
+    <MapAndTable/>
 </template>
 
 <script>
 import LocationForm from './components/LocationForm.vue'
+import MapAndTable from './components/MapAndTable.vue'
+
 
 export default {
   name: 'App',
   components: {
-    LocationForm
-      }
-}
+    LocationForm,
+    MapAndTable,
+  }
+  }
 </script>
 
 <style>
