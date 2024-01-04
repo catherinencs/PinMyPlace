@@ -1,6 +1,7 @@
 # location-sharing
 
-[![Watch the demo](public/PinMyPlace.png)](https://youtu.be/EidskSYNn6M)
+## Watch the demo:
+[![Demo video](public/PinMyPlace.png)](https://youtu.be/EidskSYNn6M)
 
 
 ## Project setup
@@ -22,7 +23,3 @@ npm run build
 ```
 node server.js
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# location-sharing
