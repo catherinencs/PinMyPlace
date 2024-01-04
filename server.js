@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const axios = require('axios'); 
 const path = require('path');
 const app = express();
 const port = 8083;
@@ -36,15 +37,20 @@ app.post('/api/submit-location', async (req, res) => {
   });
 
   try {
-    // Save the new location to the database
     await newLocation.save();
-    
-    // Send success response to the client
-    res.json({ message: 'Location data saved successfully!' });
+
+    // Prepare the payload for Slack
+    const slackMessage = {
+      text: `New location shared by ${data.name}: Latitude ${data.latitude}, Longitude ${data.longitude}, Phone: ${data.phone}`
+    };
+
+    // Send a POST request to your Slack API endpoint
+    await axios.post('https://hooks.slack.com/services/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', slackMessage);
+
+    res.json({ message: 'Location data saved and sent to Slack successfully!' });
   } catch (err) {
-    // Handle and log errors during saving
     console.error(err);
-    res.status(500).json({ message: 'Error saving data' });
+    res.status(500).json({ message: 'Error saving data or sending message to Slack' });
   }
 });
 

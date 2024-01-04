@@ -1,18 +1,14 @@
 <template>
   <div>
-    <!-- Title for locations section -->
-    <h2>Locations</h2>
-    <!-- Container for the Google Map -->
+<h4 class="title is-4">Locations Shared</h4>
     <div id="map" style="height: 400px;"></div>
-    <!-- Table to display location data -->
-    <table>
-      <!-- Table headers -->
+    <table class="table is-striped is-fullwidth">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Phone Number</th>
-          <th>Latitude</th>
-          <th>Longitude</th>
+          <th class="has-text-centered">Name</th>
+          <th class="has-text-centered">Phone Number</th>
+          <th class="has-text-centered">Latitude</th>
+          <th class="has-text-centered">Longitude</th>
         </tr>
       </thead>
       <!-- Table body with data from locations -->
@@ -104,7 +100,3 @@ export default {
 };
 
 </script>
-
-<style>
-/* TODO: Bulma CSS */
-</style>

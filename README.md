@@ -1,5 +1,8 @@
 # location-sharing
 
+[![Watch the demo](public/PinMyPlace.png)](https://youtu.be/EidskSYNn6M)
+
+
 ## Project setup
 ```
 npm install
@@ -15,9 +18,9 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
+### Run Server
 ```
-npm run lint
+node server.js
 ```
 
 ### Customize configuration

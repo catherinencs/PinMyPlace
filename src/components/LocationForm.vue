@@ -1,5 +1,8 @@
 <template>
-  <div class="container">
+  <div class="container" style="margin-bottom: 40px;">
+
+  <h1 class="title is-1">PinMyPlace</h1>
+  <h5 class="subtitle is-5">Location Sharing App</h5>
 
   <!-- Display the form only if location is not yet shared -->
     <div v-if="!locationShared">
@@ -16,7 +19,11 @@
         <div class="field">
           <label class="label">Phone Number</label>
           <div class="control">
-              <vue-tel-input v-model="phone" mode="international"></vue-tel-input>
+              <vue-tel-input 
+              v-model="phone" 
+              mode="international"
+              :preferred-countries="['ID', 'US', 'CA', 'GB']">
+              </vue-tel-input>
           </div>
         </div>
 
@@ -87,7 +94,3 @@ export default {
   }
 };
 </script>
-
-<style>
-/* Bulma */
-</style>
