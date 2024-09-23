@@ -1,4 +1,4 @@
-# location-sharing
+# PinMyPlace
 
 ## Watch the demo:
 [![Demo video](public/PinMyPlace.png)](https://youtu.be/EidskSYNn6M)
